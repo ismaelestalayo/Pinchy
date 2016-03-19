@@ -6,13 +6,11 @@
   <img src="http://bilbaodynamics.com/wp-content/uploads/2016/02/uBot_2_Carita_D-600x400.jpg" width = "100%"/>
 </p>
 
-<<<<<<< HEAD
-Pinchy es la segunda iteración del uBot, es un robot **educativo** pensado especialmente para introducirse en el mundo de la robótica. Estos diseños son completamente libres de usar bajo la licencia que se muestra al final del documento.
-=======
-Pinchy es la segunda iteración del uBot, es un robot **educativo** pensado especialmente para introducirse en el mundo de la robótica.
->>>>>>> 01edd1ebc7a74210af035f1dcbb9dfb5c2433541
+[Pinchy](http://bilbaodynamics.com/pinchy) es la segunda iteración del [uBot](http://bilbaodynamics.com/tenacitas), es un robot **educativo** pensado especialmente para introducirse en el mundo de la robótica. Estos diseños son completamente libres de usar bajo la licencia que se muestra al final del documento.
 
 ### ¿Qué contiene?
+
+Pinchy es un robot con una PCB de diseño propio que implementa componentes básicos necesarios para aprender a programar un robot. Utiliza una Arduino Micro como cerebro principal del robot.
 
 | **Unidades** 	|        **Componente**       	|
 |:------------:	|:---------------------------:	|
@@ -22,7 +20,6 @@ Pinchy es la segunda iteración del uBot, es un robot **educativo** pensado espe
 |       1      	|           LED RGB           	|
 |       1      	|            Buzzer           	|
 |       1      	|       Módulo Bluetooth      	|
-<<<<<<< HEAD
 |       1      	|          Protoboard         	|
 |       1       |       Matriz de LEDs 5x7      |
 |       1       |        Arduino Micro          |
@@ -72,11 +69,6 @@ GPL license or Creative Commons Attribution-shareAlike (Copyleft)
   <img src="http://es.creativecommons.org/blog/wp-content/uploads/2013/04/by-sa_petit.png" width = "20%"/>
 </p>
 
-=======
-|       x      	|         Pines libres        	|
-|       1      	|          Protoboard         	|
-|       1       |       Matriz de LEDs 5x7      |
->>>>>>> 01edd1ebc7a74210af035f1dcbb9dfb5c2433541
 
 >
 Bilbao Dynamics @ 2016
