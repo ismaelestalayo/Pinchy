@@ -8,9 +8,9 @@
 
 [Pinchy](http://bilbaodynamics.com/pinchy) es la segunda iteración del [uBot](http://bilbaodynamics.com/tenacitas), es un robot **educativo** pensado especialmente para introducirse en el mundo de la robótica. Estos diseños son completamente libres de usar bajo la licencia que se muestra al final del documento.
 
-### ¿Qué contiene?
+### ¿Qué es?
 
-Pinchy es un robot con una PCB de diseño propio que implementa componentes básicos necesarios para aprender a programar un robot. Utiliza una Arduino Micro como cerebro principal del robot.
+Pinchy es un "printbot" educativo libre. Está compuesto por una PCB que funciona a modo de shield con un Arduino Micro, un chasis impreso en 3D y sensores varios.
 
 | **Unidades** 	|        **Componente**       	|
 |:------------:	|:---------------------------:	|
@@ -42,7 +42,7 @@ Pinchy es un robot con una PCB de diseño propio que implementa componentes bás
 |    11   |                     RGB Verde        |
 |    12   |                      Optorreflector 2       |
 |    13   |   Libre                          |
-|    14   |   Libre                          |
+|    14   |   Pulsador                          |
 |    15   |   MAX7219 SCK                          |
 |    16   |   MAX7219 MOSI                          |
 |    17   |   MAX7219 SS                   |
