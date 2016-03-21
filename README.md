@@ -57,7 +57,9 @@ Pinchy es un "printbot" educativo libre. Está compuesto por una PCB que funcion
 
 ## Chasis
 
-![Vista Chasis](https://raw.githubusercontent.com/BilbaoDynamics/Pinchy/master/Images/vistachasis.PNG)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/BilbaoDynamics/Pinchy/master/Images/vistachasis.PNG" width = "70%"/>
+</p>
 
 ## Circuitos
 
