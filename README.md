@@ -10,7 +10,7 @@
 
 ### ¿Qué es?
 
-Pinchy es un "printbot" educativo libre. Está compuesto por una PCB que funciona a modo de shield con un Arduino Micro, un chasis impreso en 3D y sensores varios.
+Pinchy es un _printbot_ educativo libre. Está compuesto por una PCB que funciona a modo de shield con un Arduino Micro, un chasis impreso en 3D y sensores varios.
 
 | **Unidades** 	|        **Componente**       	|
 |:------------:	|:---------------------------:	|
@@ -31,29 +31,29 @@ Pinchy es un "printbot" educativo libre. Está compuesto por una PCB que funcion
 |    0    |        TX / Modulo BT       |
 |    1    |        RX / Modulo BT       |
 |    2    |       Buzzer                      |
-|    3    |             Pinza                |
+|    3    |             I/O Libre / Servo Pinza                |
 |    4    |                  Optorreflector 1           |
 |    5    |                        Servomotor 1     |
 |    6    |   Servomotor 2                          |
 |    7    |               Trigger Ultrasonidos              |
 |    8    |       Echo Ultrasonidos                      |
-|    9    |     RGB Azul                        |
-|    10   |             RGB Rojo                |
-|    11   |                     RGB Verde        |
+|    9    |     RGB Verde                        |
+|    10   |             RGB Azul                |
+|    11   |                     RGB Rojo        |
 |    12   |                      Optorreflector 2       |
-|    13   |   Libre                          |
+|    13   |   I/O Libre                          |
 |    14   |   Pulsador                          |
 |    15   |   MAX7219 SCK                          |
 |    16   |   MAX7219 MOSI                          |
 |    17   |   MAX7219 SS                   |
 |    A0   |      Libre                       |
-|    A1   | Libre |
-|    A2   | Libre |
-|    A3   | Libre |
-|    A4   | Libre |
-|    A5   | Libre |
-|    A6   | Libre |
-|    A7   | Libre |
+|    A1   | I/O Libre |
+|    A2   | I/O Libre |
+|    A3   | I/O Libre |
+|    A4   | I/O Libre |
+|    A5   | I/O Libre |
+|    A6   | I/O Libre |
+|    A7   | I/O Libre |
 
 ## Chasis
 
