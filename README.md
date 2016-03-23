@@ -37,9 +37,9 @@ Pinchy es un _printbot_ educativo libre. Está compuesto por una PCB que funcion
 |    6    |   Servomotor 2                          |
 |    7    |               Trigger Ultrasonidos              |
 |    8    |       Echo Ultrasonidos                      |
-|    9    |     RGB Verde                        |
-|    10   |             RGB Azul                |
-|    11   |                     RGB Rojo        |
+|    9    |     RGB Azul                        |
+|    10   |             RGB Rojo                |
+|    11   |                     RGB Verde        |
 |    12   |                      Optorreflector 2       |
 |    13   |   I/O Libre                          |
 |    14   |   Pulsador                          |
