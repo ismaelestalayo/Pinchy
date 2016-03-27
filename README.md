@@ -71,6 +71,14 @@ Pinchy's chasis without the circuitry
 
 ### Circuit and Board
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/BilbaoDynamics/Pinchy/master/Images/Pinchy_Board.png" width = "60%"/>
+</p>
+
+>
+Pinchy's main PCB
+>
+
 The circuitry that is needed is in the [Circuits](https://github.com/BilbaoDynamics/Pinchy/tree/master/Circuitos) folder, there you can find the schematics and the CAD files for the main PCB and for the custom-made optoreflectors.
 
 
