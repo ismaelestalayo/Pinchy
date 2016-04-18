@@ -12,7 +12,7 @@ Pinchy is an **open source** educational robot that can be printed using ordinar
 
 | **Unidades** 	|        **Componente**       	|
 |:------------:	|:---------------------------:	|
-|       2      	| Servos de rotación continua 	|
+|       2      	| Continuous Rotation Servos 	|
 |       1      	|         Ultrasound Sensor        	|
 |       2      	|     Line Follower Sensor    	|
 |       1      	|           RGB LED           	|
@@ -24,9 +24,9 @@ Pinchy is an **open source** educational robot that can be printed using ordinar
 
 
 
-## Connections
+## I/O Ports
 
-| **Pin** | **Conexión** |
+| **Pin** | **Function** |
 |:-------:|:---------------------------:|
 | 0 | TX / BT Module |
 | 1 | RX / BT Module |
@@ -72,7 +72,7 @@ Pinchy's chasis without the circuitry
 ### Circuit and Board
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/BilbaoDynamics/Pinchy/master/Images/Pinchy_Board.png" width = "60%"/>
+  <img src="https://raw.githubusercontent.com/BilbaoDynamics/Pinchy/master/Images/Pinchy_Board.png" width = "50%"/>
 </p>
 
 >
@@ -94,7 +94,7 @@ If you find a bug in the code or an issue in the circuit, we would like to know 
 
 ## License
 
-GPL license or Creative Commons Attribution-shareAlike (Copyleft)
+GPL license or Creative Commons Attribution-ShareAlike (Copyleft)
 
 <p align="center">
   <img src="http://es.creativecommons.org/blog/wp-content/uploads/2013/04/by-sa_petit.png" width = "20%"/>
