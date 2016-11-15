@@ -11,10 +11,10 @@
  *    copies of the Software, and to permit persons to whom the
  *    Software is furnished to do so, subject to the following
  *    conditions:
- * 
- *    This permission notice shall be included in all copies or 
+ *
+ *    This permission notice shall be included in all copies or
  *    substantial portions of the Software.
- * 
+ *
  *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  *    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
  *    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -56,16 +56,16 @@ class PinchyMatrix {
         /* The maximum number of devices we use */
 
     public:
-        /* 
-         * Create a new controler 
+        /*
+         * Create a new controler
          * Params :
          * dataPin		pin on the Arduino where data gets shifted out
          * clockPin		pin for the clock
-         * csPin		pin for selecting the device 
+         * csPin		pin for selecting the device
          */
         PinchyMatrix(int dataPin, int clkPin, int csPin);
 
-        /* 
+        /*
          * Set the shutdown (power saving) mode for the device
          * Params :
          * status	If true the device goes into power-down mode. Set to false
@@ -73,7 +73,7 @@ class PinchyMatrix {
          */
         void shutdown(bool status);
 
-        /* 
+        /*
          * Set the number of digits (or rows) to be displayed.
          * See datasheet for sideeffects of the scanlimit on the brightness
          * of the display.
@@ -82,29 +82,29 @@ class PinchyMatrix {
          */
         void setScanLimit(int limit);
 
-        /* 
+        /*
          * Set the brightness of the display.
          * Params:
          * intensity	the brightness of the display. (0..15)
          */
         void setIntensity(int intensity);
 
-        /* 
-         * Switch all Leds on the display off. 
+        /*
+         * Switch all Leds on the display off.
          */
         void clearDisplay();
 
-        /* 
+        /*
          * Set the status of a single Led.
          * Params :
          * row	the row of the Led (0..4)
          * col	the column of the Led (0..6)
-         * state	If true the led is switched on, 
+         * state	If true the led is switched on,
          *		if false it is switched off
          */
         void setLed(int row, int col, boolean state);
 
-        /* 
+        /*
          * Set all 5 Led's in a column to a new state
          * Params:
          * col	col which is to be set (0..6)
@@ -113,7 +113,7 @@ class PinchyMatrix {
          */
         void setCol(int col, byte value);
 
-        /* 
+        /*
          * Set all 7 Led's in a row to a new state
          * Params:
          * row	row which is to be set (0..4)
@@ -122,7 +122,7 @@ class PinchyMatrix {
          */
         void setRow(int row, byte value);
 
-	/* 
+	/*
          * Set all 5 Led's columns to a new state
          * Params:
          * f[7]  from left to right, cols will be set.
@@ -131,8 +131,8 @@ class PinchyMatrix {
 	 *       column
          */
         void setMatrixByCols(byte f[7]);
-	
-	/* 
+
+	/*
          * Set all 7 Led's rows to a new state
          * Params:
          * f[5]  from bottom to top, rows will be set.
@@ -141,31 +141,31 @@ class PinchyMatrix {
 	 *       row
          */
 	void setMatrixByRows(byte f[5]);
-	
+
 
 	void setMatrix();
-	
-	/* 
+
+	/*
          * Move the drawing one column to the left
          */
 	void left();
-	
-	/* 
+
+	/*
          * Move the drawing one column to the right
          */
 	void right();
-	
-	/* 
+
+	/*
          * Move the drawing one row to the top
          */
 	void up();
-	
-	/* 
+
+	/*
          * Move the drawing one row to the bottom
          */
 	void down();
-	
-	/* 
+
+	/*
          * Set a number
          * Params:
          * num   number between 0 and 99.
@@ -173,8 +173,8 @@ class PinchyMatrix {
 	 *       matrix
          */
 	void number(int num);
-	
-	/* 
+
+	/*
          * A lot of faces, test them
          */
 	void kitten();
@@ -189,8 +189,8 @@ class PinchyMatrix {
 	void openMouth();
 	void heart();
 	void bd();
-	
-	/* 
+
+	/*
          * Different arrows, useful.
          */
 	void rightArrow();
@@ -198,10 +198,14 @@ class PinchyMatrix {
 	void upArrow();
 	void downArrow();
 
+  //Extra
+  void equals();
+  void FBplus1();
+  void FBlike();
+
+  //TEMP just for testing
+  void binary(String bin);
 
 };
 
 #endif	//PinchyMatrix.h
-
-
-

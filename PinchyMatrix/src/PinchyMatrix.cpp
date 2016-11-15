@@ -3,7 +3,7 @@
  *    This library has been designed for Pinchy, our robot, but you can use it
  *    with a display.
  *    Copyright (c) 2007 Eberhard Fahle [based on LedControl.cpp]
- * 
+ *
  *    Permission is hereby granted, free of charge, to any person
  *    obtaining a copy of this software and associated documentation
  *    files (the "Software"), to deal in the Software without
@@ -12,10 +12,10 @@
  *    copies of the Software, and to permit persons to whom the
  *    Software is furnished to do so, subject to the following
  *    conditions:
- * 
- *    This permission notice shall be included in all copies or 
+ *
+ *    This permission notice shall be included in all copies or
  *    substantial portions of the Software.
- * 
+ *
  *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  *    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
  *    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -56,8 +56,8 @@ PinchyMatrix::PinchyMatrix(int dataPin, int clkPin, int csPin) {
     pinMode(SPI_CS,OUTPUT);
     digitalWrite(SPI_CS,HIGH);
     SPI_MOSI=dataPin;
-    for(int i=0;i<64;i++) 
-        status[i]=0x00;        
+    for(int i=0;i<64;i++)
+        status[i]=0x00;
     spiTransfer(OP_DISPLAYTEST,0);
     //scanlimit is set to max on startup
     setScanLimit(7);
@@ -81,7 +81,7 @@ void PinchyMatrix::setScanLimit(int limit) {
 }
 
 void PinchyMatrix::setIntensity(int intensity) {
-    if(intensity>=0 && intensity<16)	
+    if(intensity>=0 && intensity<16)
         spiTransfer(OP_INTENSITY,intensity);
 }
 
@@ -118,7 +118,7 @@ void PinchyMatrix::setCol(int col, byte value) {
 void PinchyMatrix::setRow(int row, byte value) {
     byte val;
     value*=2;
-    if(row<0 || row>4) 
+    if(row<0 || row>4)
         return;
     for(int col=0;col<8;col++) {
         val=value >> (7-col);
@@ -136,14 +136,14 @@ void PinchyMatrix::spiTransfer(volatile byte opcode, volatile byte data) {
     //put our device data into the array
     spidata[1]=opcode;
     spidata[0]=data;
-    //enable the line 
+    //enable the line
     digitalWrite(SPI_CS,LOW);
-    //Now shift out the data 
+    //Now shift out the data
     for(int i=MAXBYTES;i>0;i--)
         shiftOut(SPI_MOSI,SPI_CLK,MSBFIRST,spidata[i-1]);
     //latch the data onto the display
     digitalWrite(SPI_CS,HIGH);
-}    
+}
 
 void PinchyMatrix::setMatrixByCols(byte tmp[7])
 {
@@ -210,7 +210,7 @@ void PinchyMatrix::down()
 
 void PinchyMatrix::number(int num) //numero entre 0 y 99
 {
-  byte decena = num/10; 
+  byte decena = num/10;
   byte unidad = num-(10*decena);
   byte tabla[5][10] = {{7,1,7,7,1,7,7,1,7,7}, //f(0)
                        {5,1,4,1,1,1,5,1,5,1}, //f(1)
@@ -218,7 +218,7 @@ void PinchyMatrix::number(int num) //numero entre 0 y 99
                        {5,1,1,1,5,4,4,1,5,5}, //f(3)
                        {7,3,7,7,5,7,7,7,7,7}};//f(4)
                       //0,1,2,3,4,5,6,7,8,9
-  
+
   for(int i=0; i<5; i++)
   {
     f[i] = (tabla[i][unidad])+(16*tabla[i][decena]);
@@ -367,5 +367,56 @@ void PinchyMatrix::downArrow(){
 	f[2] = B00101010;
 	f[1] = B00011100;
 	f[0] = B00001000;
+	setMatrix();
+}
+
+void PinchyMatrix::equals(){
+  f[4] = B00000000;
+	f[3] = B00111110;
+	f[2] = B00000000;
+	f[1] = B00111110;
+	f[0] = B00000000;
+  setMatrix();
+}
+
+void PinchyMatrix::FBplus1(){
+  f[4] = B00000010;
+	f[3] = B00100110;
+	f[2] = B01110010;
+	f[1] = B00100010;
+	f[0] = B00000111;
+  setMatrix();
+}
+
+void PinchyMatrix::FBlike(){
+  f[4] = B00001100;
+	f[3] = B00001100;
+	f[2] = B00011111;
+	f[1] = B01111111;
+	f[0] = B01111111;
+  setMatrix();
+}
+
+void PinchyMatrix::binary(String bin){
+  int k = 0, z = 0;
+  f[0] = B00000000;
+  f[1] = B00000000;
+  f[2] = B00000000;
+  f[3] = B00000000;
+  f[4] = B00000000;
+
+  for (int i = 4; i >= 0; i--){
+      for (int j = 0; j < 7; j++){
+          if( bin.charAt(z) == '0'){
+            bitClear(f[i], 6-k);
+          }
+          else if( bin.charAt(z) == '1'){
+            bitSet(f[i], 6-k);
+          }
+          z++;
+          k++;
+      }
+      k = 0;
+  }
 	setMatrix();
 }
